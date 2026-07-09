@@ -1,0 +1,24 @@
+{
+  "name": "avaliacao-backend",
+  "version": "1.0.0",
+  "description": "qualquer coisa",
+  "homepage": "https://github.com/nathimartins590-sys/avaliacao-backend#readme",
+  "bugs": {
+    "url": "https://github.com/nathimartins590-sys/avaliacao-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathimartins590-sys/avaliacao-backend.git"
+  },
+  "license": "ISC",
+  "author": "Nathalia Martins",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
