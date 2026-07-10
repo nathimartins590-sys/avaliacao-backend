@@ -1,5 +1,5 @@
 import express from 'express'
-import bancoDeDados from './repository/bancoDedados.js';
+import bancoDedados from './repository/index.js';
 
 const app = express()
 
@@ -16,7 +16,6 @@ app.get('/api/v1/doguinho/:id', (req, res) => {
     }
     res.send({ cachorro })
 })
-
 
 app.get('/api/v1/dog-delt/:id', (req, res) => {
 
@@ -44,18 +43,18 @@ app.get('/api/v1/dog-edit/:id/:alterar', (req, res) => {
 
         return
     }
-    res.send({ name }) = alterar
+    res.send({ nome }) = alterar
 })
 
-app.get('/api/dog', (req, res) => {
+app.get('/api/v1/dog', (req, res) => {
 
-    const { id, name } = req.query
+    const { id, nome } = req.query
 
     bancoDedados.push({ id, nome })
 
     console.log(bancoDedados)
 
-    if (!id || !name) {
+    if (!id || !nome) {
         res.send({ message: "Favor informar id e o nome do doguinho  " })
         return
     }
